@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import {Button} from './components/Button';
+import {CounterManagement} from './components/CounterManagement';
 
-function App() {
+interface AppState{
+  change: boolean;
+}
+
+class App extends React.Component<{}, AppState>{
+  constructor(props: {}){
+    super(props);
+    this.state = {
+      change: true
+    }
+  }
+
+  clickButton = () => {
+    this.setState({change: !this.state.change});
+  }
+
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>My App</h1>
+      {this.state.change && <CounterManagement ownerName="Heibert" />}
+      <button onClick={this.clickButton}>Change</button>
+    </>
   );
+  } 
+  
 }
 
 export default App;
