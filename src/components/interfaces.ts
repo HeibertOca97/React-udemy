@@ -9,7 +9,19 @@ export interface ICounterManagementProps{
 
 export interface ICounterManagementState{
   counter: number;
-  users: string[];
+  userData: IUserData;
+  userID: Array<IUserData>;
 }
 
+interface IUserData{
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+}
+
+export interface IUserDataAPI{
+  data: IUserData; 
+}
 
