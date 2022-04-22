@@ -1,13 +1,12 @@
 import React from 'react';
-//import {Button} from './components/Button';
-import {CounterManagement} from './components/CounterManagement';
+import {UsersManagement} from './tarea1/UsersManagement'
+
 
 class App extends React.Component{
   render(){
     return (
-      <>
-        <h1>My App</h1>
-        <CounterManagement ownerName="Heibert" />
+      <>        
+        <UsersManagement />
       </>
     );
   } 
