@@ -1,16 +1,15 @@
 import React from 'react';
-import {UsersManagement} from './tarea1/UsersManagement'
+import './App.css';
+import UsersManagement from './solvedTask/UsersManagement';
+import {Instruction} from './solvedTask/Instruction'
 
-
-class App extends React.Component{
-  render(){
-    return (
-      <>        
-        <UsersManagement />
-      </>
-    );
-  } 
-
+function App() {
+  return (
+    <div className="App">        
+      <Instruction />
+      <UsersManagement />
+    </div>
+  );
 }
 
 export default App;
